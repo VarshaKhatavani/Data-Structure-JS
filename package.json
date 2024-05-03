@@ -1,0 +1,17 @@
+{
+  "name": "data-structure-js",
+  "version": "1.0.0",
+  "description": "data structure in js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Data-Structure-JS"
+  },
+  "author": "Varsha Khatavani",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
