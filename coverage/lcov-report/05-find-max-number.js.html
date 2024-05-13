@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for 01-hello-world.js</title>
+    <title>Code coverage report for 05-find-max-number.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> 01-hello-world.js</h1>
+        <h1><a href="index.html">All files</a> 05-find-max-number.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -86,7 +86,12 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,33 +110,43 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- ** Instructions
- ** Write a function called helloWorld that returns a string of 'Hello World!'.
+ * * Instructions
+ * * Write a function called findMaxNumber that takes in an array of numbers and returns the largest number in the array.
+ 
+* * Function Signature
+* * Returns the largest number in an array.
+*   @param {number[]} arr - The array of numbers.
+*   @returns {number} - The largest number in the array.
 &nbsp;
- ** Function Signature
-&nbsp;
- ** Returns a string containing 'Hello World!'.
- * @returns {string} - The string 'Hello World!'.
-&nbsp;
- ** function helloWorld(): string;
- ** Examples
- ** helloWorld() // 'Hello World!'
-&nbsp;
- *! Constraints
- *! I will put any constraints here. They will vary depending on the challenge.
- *! The function must return a string
-&nbsp;
+* * function findMaxNumber(arr: number[]): number;
+* * Examples
+* * findMaxNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // 10
+* * findMaxNumber([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]); // 10
+* * findMaxNumber([1, 2, 3, 4, 5, 10, 9, 8, 7, 6]); // 10
+ * 
+ *  return Math.max(...arr);
  */
 &nbsp;
-function helloWorld() {
-  return "Hello World!";
+function findMaxNumber(arr) {
+  let max = arr[0];
+  for (let i = 0; i &lt; arr.length; i++) {
+    if (arr[i] &gt; max) {
+      max = arr[i];
+    }
+  }
+  return max;
 }
-module.exports = helloWorld;
+module.exports = findMaxNumber;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

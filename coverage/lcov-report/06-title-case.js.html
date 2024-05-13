@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for 01-hello-world.js</title>
+    <title>Code coverage report for 06-title-case.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> 01-hello-world.js</h1>
+        <h1><a href="index.html">All files</a> 06-title-case.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -86,7 +86,13 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,31 +113,43 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- ** Instructions
- ** Write a function called helloWorld that returns a string of 'Hello World!'.
+ * * Instructions
+ * * Write a function called titleCase that takes in a string and returns the string with the first letter of each word capitalized.
 &nbsp;
- ** Function Signature
+ * * Function Signature
+ * * Returns a string with the first letter of each word capitalized.
+ * @param {string} str - The string to capitalize.
+ * @returns {string} - The string with the first letter of each word capitalized.
 &nbsp;
- ** Returns a string containing 'Hello World!'.
- * @returns {string} - The string 'Hello World!'.
+ * * function titleCase(str: string): string;
+ * * Examples
+ * * titleCase("I'm a little tea pot"); // I'm A Little Tea Pot
+ * * titleCase('sHoRt AnD sToUt'); // Short And Stout
+ * * titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'); // Here Is My Handle Here Is My Spout
 &nbsp;
- ** function helloWorld(): string;
- ** Examples
- ** helloWorld() // 'Hello World!'
+* ! Constraints
+* ! You may assume that each word consists of only letters and spaces
+*/
 &nbsp;
- *! Constraints
- *! I will put any constraints here. They will vary depending on the challenge.
- *! The function must return a string
-&nbsp;
- */
-&nbsp;
-function helloWorld() {
-  return "Hello World!";
+function titleCase(str) {
+  let words = str.toLowerCase().split(" ");
+  ["sHoRt", "AnD", "sToUt"];
+  for (let i = 0; i &lt; words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+  return words.join(" ");
 }
-module.exports = helloWorld;
+&nbsp;
+module.exports = titleCase;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
